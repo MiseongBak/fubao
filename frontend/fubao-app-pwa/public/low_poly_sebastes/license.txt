@@ -1,0 +1,8 @@
+Model Information:
+* title:	[Low Poly] Sebastes
+* source:	https://sketchfab.com/3d-models/low-poly-sebastes-a2e4a6b0e41d47de8b255031441022aa
+* author:	Jiffycrew (https://sketchfab.com/jiffycrew)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

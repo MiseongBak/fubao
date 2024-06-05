@@ -1,0 +1,7 @@
+docker exec -it django-server bash  도커 안으로 들어가는 명령어(장고 파일 건들고 싶을 때)
+docker logs django-server 장고가 잘 돌아가고 있는 로그를 보여주는 명령어
+sudo docker start 서버네임
+
+젠킨스 계정
+id: fubao
+pw: fubao82493

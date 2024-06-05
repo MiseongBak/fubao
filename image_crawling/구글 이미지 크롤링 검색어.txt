@@ -1,0 +1,14 @@
+[구글 이미지 크롤링 검색어]
+
+1. 넙치 [넙치, paralichthys olivaceus pic]
+2. 우럭 [우럭, Sebastes schlegelii, korean rock fish]
+3. 감성돔 [감성돔, black sea bream, black sea bream pic]
+4. 돌돔 [돌돔, oplegnathus fasciatus pic]
+<<<<<<< HEAD
+5. 노래미 [쥐노래미, 노래미, 놀래미, green ling image, hexagrammos agrammus pic]
+6. 참돔 [red sea bream pic, 참돔]
+7. 농어 [농어, sea bass pic]
+8. 전갱이 [horse mackerel pic, 전갱이]
+=======
+5. 쥐노래미 [쥐노래미, 노래미, 놀래미, green ling image, hexagrammos agrammus pic]
+>>>>>>> a6b3e600b9a295f37a2d1f87897e132e88b6ea7d

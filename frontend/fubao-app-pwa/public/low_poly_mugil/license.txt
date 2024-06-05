@@ -1,0 +1,8 @@
+Model Information:
+* title:	[Low Poly] Mugil
+* source:	https://sketchfab.com/3d-models/low-poly-mugil-bf40d6d6e5594c6b9ce041734d2190d9
+* author:	Jiffycrew (https://sketchfab.com/jiffycrew)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

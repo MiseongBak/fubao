@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>3D 모델 렌더링</title>
+</head>
+
+<body>
+    <!-- 렌더링할 3D 모델을 표시할 캔버스 -->
+    <canvas id="canvas" width="300" height="300"></canvas>
+
+    <!-- 모듈 import를 위한 importmap 설정 -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.138.3/build/three.module.js",
+                "GLTFLoader": "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+            }
+        }
+    </script>
+
+    <!-- JavaScript 모듈을 사용한 3D 렌더링 스크립트 -->
+    <script type="module">
+        // GLTFLoader 및 THREE 모듈을 import
+        import * as THREE from 'three';
+        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+        // 씬, 렌더러, 카메라 초기화
+        let scene = new THREE.Scene();
+        let renderer = new THREE.WebGLRenderer({
+            canvas: document.querySelector('#canvas'),
+            antialias: true
+        });
+        renderer.outputEncoding = THREE.sRGBEncoding;
+
+        let camera = new THREE.PerspectiveCamera(30, 1);
+        camera.position.set(0, 0, 15)
+
+        // 배경을 흰색으로 설정
+        scene.background = new THREE.Color('white');
+
+        // 빛 설정
+        const ambientLight = new THREE.AmbientLight(0xffffff, 3); // 주변 조명
+        const directionalLight = new THREE.DirectionalLight(0xff0000, 1); // 방향 조명
+        directionalLight.position.set(1, 1, 1).normalize(); // 조명의 위치
+
+        // 씬에 빛 추가
+        scene.add(ambientLight);
+        scene.add(directionalLight);
+
+        // GLTFLoader 인스턴스 생성
+        const loader = new GLTFLoader();
+
+        // 3D 모델 로드 및 씬에 추가
+        loader.load('animated_low_poly_fish/scene.gltf', function (gltf) {
+            const model = gltf.scene;  // gltf.scene을 직접 사용
+
+            // 로드한 모델의 크기와 중심을 기반으로 카메라 위치 및 타겟 조정
+            const box = new THREE.Box3().setFromObject(model);
+            const center = box.getCenter(new THREE.Vector3());
+            const size = box.getSize(new THREE.Vector3());
+
+            // 카메라 위치 및 타겟 조정
+            camera.position.copy(center);
+            camera.position.x += size.x * 5; // 적절한 시점을 위해 이 값을 조정할 수 있음
+            camera.lookAt(center);
+
+            // 씬에 모델 추가
+            scene.add(model);
+
+            // Morph 애니메이션 처리
+            const animations = gltf.animations;
+            const mixer = new THREE.AnimationMixer(model);
+
+            // 모든 애니메이션을 믹서에 추가하고 재생
+            animations.forEach((animation) => {
+                const action = mixer.clipAction(animation);
+                action.play();
+            });
+
+            // 애니메이션 업데이트 함수 정의
+            function animate() {
+                requestAnimationFrame(animate);
+
+                // 믹서 업데이트
+                mixer.update(0.016); // 보통 60FPS 기준으로 업데이트
+
+                // 모델 회전
+                model.rotation.y += 0.005;
+
+                // 렌더링
+                renderer.render(scene, camera);
+            }
+
+            // 애니메이션 시작
+            animate();
+        });
+    </script>
+</body>
+
+</html>

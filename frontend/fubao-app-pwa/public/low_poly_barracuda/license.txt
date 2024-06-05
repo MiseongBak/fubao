@@ -1,0 +1,8 @@
+Model Information:
+* title:	[Low Poly] Barracuda
+* source:	https://sketchfab.com/3d-models/low-poly-barracuda-7232fe57bf284f92a9142d681010dd06
+* author:	Jiffycrew (https://sketchfab.com/jiffycrew)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

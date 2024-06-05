@@ -1,0 +1,12 @@
+[어종 영어 이름 리스트]
+
+1. 참돔 (red sea bream)
+2. 농어 (sea bass)
+3. 전갱이 (horse mackerel)
+4. 숭어 (mugil cephalus)
+5. 참고등어 (scomber japonicus)
+6. 넙치 (flatfish)
+7. 우럭 (korean rockfish)
+8. 감성돔 (black sea bream)
+9. 돌돔 (rock bream)
+10. 노래미 (greenling)

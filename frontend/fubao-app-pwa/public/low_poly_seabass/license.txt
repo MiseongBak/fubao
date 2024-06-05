@@ -1,0 +1,8 @@
+Model Information:
+* title:	[Low Poly] Seabass
+* source:	https://sketchfab.com/3d-models/low-poly-seabass-73f6d7e345924e29a79e97ad9200340a
+* author:	Jiffycrew (https://sketchfab.com/jiffycrew)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
